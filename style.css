@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  background-color: #1c2325;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 40%;
+  overflow: hidden;
+}
+.wrapper input {
+  display: none;
+}
+.slider-content {
+  display: flex;
+  width: 500%;
+  transition: all 1s ease;
+}
+.slider-content img {
+  width: 100%;
+  border-radius: 15px;
+}
+.text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+.text {
+  font-size: 3rem;
+  color: #eee;
+  width: 100%;
+  transition: all 1s ease;
+  overflow: hidden;
+  background-color: #1c2325;
+}
+.slider-text {
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+}
+.slider-text-wrapper {
+  display: flex;
+  width: 500%;
+  transition: all 1s ease;
+}
+
+.dotts {
+  display: flex;
+  justify-content: space-between;
+}
+.dotts label {
+  transition: all 0.5s ease;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  cursor: pointer;
+}
+.dotts label:hover .dott {
+  background-color: #eee;
+  background-origin: solid #eee 0.2rem;
+  border: solid #eee 0.2rem;
+}
+
+.dott {
+  border-radius: 50%;
+  border: solid #4986db 0.2rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: #4986db;
+}
+
+#slide-1:checked ~ .slider-content {
+  margin-left: 0;
+}
+#slide-2:checked ~ .slider-content {
+  margin-left: -100%;
+}
+#slide-3:checked ~ .slider-content {
+  margin-left: -200%;
+}
+#slide-4:checked ~ .slider-content {
+  margin-left: -300%;
+}
+#slide-5:checked ~ .slider-content {
+  margin-left: -400%;
+}
+#slide-1:checked ~ .text-wrapper .slider-text .slider-text-wrapper {
+  margin-left: 0;
+}
+#slide-2:checked ~ .text-wrapper .slider-text .slider-text-wrapper {
+  margin-left: -100%;
+}
+#slide-3:checked ~ .text-wrapper .slider-text .slider-text-wrapper {
+  margin-left: -200%;
+}
+#slide-4:checked ~ .text-wrapper .slider-text .slider-text-wrapper {
+  margin-left: -300%;
+}
+#slide-5:checked ~ .text-wrapper .slider-text .slider-text-wrapper {
+  margin-left: -400%;
+}
+#slide-1:checked ~ .text-wrapper .dotts label .dott1 {
+  background-color: transparent;
+}
+#slide-2:checked ~ .text-wrapper .dotts label .dott2 {
+  background-color: transparent;
+}
+#slide-3:checked ~ .text-wrapper .dotts label .dott3 {
+  background-color: transparent;
+}
+#slide-4:checked ~ .text-wrapper .dotts label .dott4 {
+  background-color: transparent;
+}
+#slide-5:checked ~ .text-wrapper .dotts label .dott5 {
+  background-color: transparent;
+}
+.slider-img {
+  width: 20%;
+}
+@media (max-width: 1024px) {
+  .main {
+    width: 90%;
+  }
+  .text {
+    font-size: 3.5rem;
+  }
+  .dotts label {
+    width: 6rem;
+  }
+  .dott {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .text-wrapper {
+    flex-direction: column-reverse;
+  }
+  .main {
+    width: 58%;
+  }
+  .dotts {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 85%;
+  }
+  .text {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 375px) {
+  .main {
+    width: 90%;
+  }
+  .text {
+    font-size: 2.2rem;
+  }
+}
