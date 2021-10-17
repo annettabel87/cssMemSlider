@@ -44,6 +44,9 @@ body {
   overflow: hidden;
   background-color: #1c2325;
 }
+.text:active {
+color: rgb(228, 218, 135);
+}
 .slider-text {
   position: relative;
   width: fit-content;
@@ -71,6 +74,10 @@ body {
   background-origin: solid #eee 0.2rem;
   border: solid #eee 0.2rem;
 }
+.dotts label:active .dott {
+    background-color: rgb(228, 218, 135);
+    opacity: 0.8;
+  }
 
 .dott {
   border-radius: 50%;
